@@ -14,6 +14,7 @@ html{
   --title: #00ff00;
   --black: black;
   --white: white;
+  --col2:#8F43EE;
   --col1: #0ff;
   --f1: "Bebas Neue";
   --f2: "Gilroy";
@@ -127,8 +128,7 @@ menu bar styling
   height: 100vh;
   width: 55%;
   overflow: hidden;
-  background-color: var(--white);
-  background-color: #FFFFFF;
+  background-color: var(--col2);
   position: fixed;
   top: 0;
   right: 0;
@@ -902,30 +902,46 @@ hr {
   height: 100%;
   width: 100%;
   overflow: scroll;
-  border-top: 1.6px solid #8F43EE;
-  border-bottom: 1.6px solid #8F43EE;
+  background-color: black;
 }
 .container {
- 
   box-sizing: border-box;
   position: relative;
   max-width: 800px;
   margin: auto;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
-
-
-
+.events{
+  font-size: 2rem;
+  color: white;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events h3{
+  font-family: var(--f2);
+}
+.rule{
+  border: 1.5px solid white;
+  width: 45px;
+  align-self: center;
+  display: inline-block;
+}
 /* Atropos web component */
 atropos-component {
   display: block;
   padding: 2rem;
-  background: black;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 atropos-component .atropos-inner {
   border-radius: 1rem
