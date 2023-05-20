@@ -2,7 +2,7 @@
 console.log(typeof window);
 let mainFlag = false;
 let SpinController=0; // 0 or 1 
-let spinnerTimingControl = 3550*SpinController; //1sec
+let spinnerTimingControl = 3550*SpinController; //3.5sec
 // Nav Section
 let hamburgerObj;
 let clicked = false;
