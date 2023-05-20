@@ -981,8 +981,6 @@ atropos-component .atropos-active .atropos-shadow {
 
   }
   .hamIcon{
-    display :block;
-  }
-
-  
+    display :flex;
+  } 
 }
