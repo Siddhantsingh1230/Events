@@ -72,12 +72,11 @@ Hamburger Icon Styling
 .hamIcon {
   scale: 0.69;
   z-index: 9999;
-  display: inline-block;
   cursor: pointer;
   height: 50px;
   width: 50px;
   padding: 4px;
-  display: flex;
+  display: none;
   position: relative;
   justify-content: center;
   align-items: center;

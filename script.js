@@ -172,6 +172,6 @@ class AtroposComponent extends HTMLElement {
   customElements.define('atropos-component', AtroposComponent);
 
 let astroBtn=document.getElementById("astroBtn");
-astroBtn.addEventListener("",(event)=>{
+astroBtn.addEventListener("onmouseover",(event)=>{
   event.stopPropagation();
 });
