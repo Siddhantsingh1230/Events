@@ -7,6 +7,9 @@
   font-family: "Groupe";
   src: url("Fonts/groupemedium-8mxgn.otf");
 }
+html{
+  scroll-behavior: smooth;
+}
 :root {
   --title: #00ff00;
   --black: black;
@@ -898,15 +901,16 @@ hr {
 .s2{
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
+  border-top: 1px solid #8F43EE;
 }
 .container {
-  width: 100%;
-  height: 100%;
+ 
   box-sizing: border-box;
   position: relative;
   max-width: 800px;
   margin: auto;
+ 
 }
 
 
@@ -924,6 +928,7 @@ atropos-component {
 }
 atropos-component .atropos-inner {
   border-radius: 1rem
+  
 }
 atropos-component img {
   position: absolute;
