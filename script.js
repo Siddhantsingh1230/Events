@@ -1,7 +1,7 @@
 //Control Variables
 console.log(typeof window);
 let mainFlag = false;
-let SpinController=1; // 0 or 1 
+let SpinController=0; // 0 or 1 
 let spinnerTimingControl = 3550*SpinController; //1sec
 // Nav Section
 let hamburgerObj;
@@ -139,7 +139,7 @@ window.onscroll=()=>{
  bar.style.width=progress+"%";
 }
 
-
+// astrospos container
 class AtroposComponent extends HTMLElement {
     constructor() {
       super();
@@ -170,3 +170,8 @@ class AtroposComponent extends HTMLElement {
   }
 
   customElements.define('atropos-component', AtroposComponent);
+
+let astroBtn=document.getElementById("astroBtn");
+astroBtn.addEventListener("",(event)=>{
+  event.stopPropagation();
+});
