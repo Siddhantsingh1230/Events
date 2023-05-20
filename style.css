@@ -1007,7 +1007,7 @@ atropos-component .atropos-active .atropos-shadow {
   color: var(--title);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .nav #desktopmenuList{
     display : none;
 
