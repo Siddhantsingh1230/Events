@@ -7,15 +7,14 @@
   font-family: "Groupe";
   src: url("Fonts/groupemedium-8mxgn.otf");
 }
-html{
-  scroll-behavior: smooth;
-}
+
 :root {
   --title: #00ff00;
   --black: black;
   --white: white;
   --col2:#8F43EE;
   --col1: #0ff;
+  --col3:#0F6292;
   --f1: "Bebas Neue";
   --f2: "Gilroy";
 }
@@ -35,6 +34,8 @@ html,
 body {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
+  background: black;
 }
 .main {
   width: 100%;
@@ -128,7 +129,7 @@ menu bar styling
   height: 100vh;
   width: 55%;
   overflow: hidden;
-  background-color: var(--col2);
+  background-color: var(--white);
   position: fixed;
   top: 0;
   right: 0;
@@ -654,7 +655,7 @@ hr {
 }
 
 .svg {
-  stroke: #7ceaa4;
+  stroke: var(--title);
   position: absolute;
   bottom: -100vh;
   transform-style: preserve-3d;
@@ -901,9 +902,10 @@ hr {
 .s2{
   height: 100%;
   width: 100%;
-  overflow: scroll;
   background-color: black;
+  overflow: scroll;
 }
+
 .container {
   box-sizing: border-box;
   position: relative;
@@ -913,21 +915,22 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .events{
   font-size: 2rem;
-  color: white;
-  margin-top: 2rem;
+  color: var(--title);
   display: flex;
   justify-content: center;
   align-items: center;
+ background-color: black;
+ margin-bottom: 0.5rem;
 }
 .events h3{
   font-family: var(--f2);
+  
 }
-.rule{
-  border: 1.5px solid white;
+.events .rule{
+  border: 1.5px solid var(--white);
   width: 45px;
   align-self: center;
   display: inline-block;
@@ -970,12 +973,12 @@ atropos-component img.atropos-spacer {
   visibility: hidden;
 }
 .AstroLogo{
-  top: -30%;
+  top: -5%;
 }
 atropos-component .atropos-button-wrap {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 30%;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -991,15 +994,15 @@ atropos-component .atropos-button-wrap a {
 }
 atropos-component .atropos-button-wrap div{
   border-radius: 5px;
-  background-color: #8F43EA;
-  border: 1px solid black;
+  background-color: var(--title);
+  color: black;
   position: absolute;
-  padding: 5px;
+  padding-inline:8px;
+  padding-block: 5;
   transition: all ease 0.2s;
 }
 atropos-component .atropos-button-wrap div:hover{
-  scale: 0.95;
-  opacity: 0.78;
+  scale: 1.13;
 }
 atropos-component .atropos-shadow {
   filter: blur(50px);
@@ -1007,4 +1010,9 @@ atropos-component .atropos-shadow {
 }
 atropos-component .atropos-active .atropos-shadow {
   opacity: 1 !important;
+}
+
+
+/* section 3 */
+.s3{
 }
