@@ -151,7 +151,6 @@ hr {
 
 #menu a {
   text-decoration: none;
-  transition: all ease 0.2s;
   position: relative;
 }
 #menu a::before{
@@ -162,7 +161,7 @@ hr {
   bottom: -2.5px;
   left: 8%;
   border-bottom: 2px solid black;
-  transition: all ease 0.2s;
+  transition: all ease-in 0.2s;
 }
 #menu a:hover:before{
   content:"";
@@ -227,6 +226,7 @@ hr {
   width: 100%;
   background: var(--black);
   overflow: hidden;
+  
 }
 
 /*for scroll stop */
@@ -325,16 +325,18 @@ hr {
 }
 
 /* S1 image Styling */
+
 .containerS1 {
   height: 100%;
   width: 100%;
   position: relative;
   animation: pop ease 1.5s;
+  display: flex;
   
 }
 
-.s1 img {
-  position: absolute;
+.s1 .containerS1 img {
+  position:absolute;
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -656,6 +658,7 @@ hr {
 
 .svg {
   stroke: var(--title);
+  opacity: 0.76;
   position: absolute;
   bottom: -100vh;
   transform-style: preserve-3d;
@@ -822,74 +825,7 @@ hr {
   }
 }
 
-.svg:nth-child(8) {
-  left: -6%;
-  -webkit-animation: raise8 17s linear infinite;
-          animation: raise8 17s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  transform: scale(1.8) rotate(180deg);
-  z-index: 1;
-  filter: blur(2px);
-}
-@-webkit-keyframes raise8 {
-  to {
-    bottom: 150vh;
-    transform: scale(1.8) rotate(317deg);
-  }
-}
-@keyframes raise8 {
-  to {
-    bottom: 150vh;
-    transform: scale(1.8) rotate(317deg);
-  }
-}
 
-.svg:nth-child(9) {
-  left: -9%;
-  -webkit-animation: raise9 21s linear infinite;
-          animation: raise9 21s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  transform: scale(2.1) rotate(115deg);
-  z-index: 2;
-  filter: blur(3px);
-}
-@-webkit-keyframes raise9 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.1) rotate(264deg);
-  }
-}
-@keyframes raise9 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.1) rotate(264deg);
-  }
-}
-
-.svg:nth-child(10) {
-  left: 20%;
-  -webkit-animation: raise10 11s linear infinite;
-          animation: raise10 11s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  transform: scale(2.4) rotate(200deg);
-  z-index: 3;
-  filter: blur(4px);
-}
-@-webkit-keyframes raise10 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.4) rotate(227deg);
-  }
-}
-@keyframes raise10 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.4) rotate(227deg);
-  }
-}
 
 /* Scroll Indicator */
 #scrollIndicator{
@@ -900,10 +836,9 @@ hr {
   transition: width 0.1s;
 }
 .s2{
-  height: 100%;
   width: 100%;
+  height: auto;
   background-color: black;
-  overflow: scroll;
 }
 
 .container {
@@ -915,6 +850,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .events{
   font-size: 2rem;
@@ -998,7 +934,7 @@ atropos-component .atropos-button-wrap div{
   color: black;
   position: absolute;
   padding-inline:8px;
-  padding-block: 5;
+  padding-block: 5px;
   transition: all ease 0.2s;
 }
 atropos-component .atropos-button-wrap div:hover{

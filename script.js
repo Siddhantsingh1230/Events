@@ -1,5 +1,4 @@
 //Control Variables
-console.log(typeof window);
 let mainFlag = false;
 let SpinController=0; // 0 or 1 
 let spinnerTimingControl = 3550*SpinController; //3.5sec
@@ -107,8 +106,8 @@ up.addEventListener("click", function () {
 let s1Img = document.querySelector(".s1 img");
 let s1 = document.querySelector(".s1");
 s1.addEventListener("mousemove", (coords) => {
-  s1Img.style.top = 1 - coords.y * 0.05 + "px";
-  s1Img.style.left = 1 - coords.x * 0.05 + "px";
+  s1Img.style.top = 1 - coords.clientY * 0.05 + "px";
+  s1Img.style.left = 1 - coords.clientX * 0.05 + "px";
 });
 
 //Spinner
@@ -147,25 +146,25 @@ class AtroposComponent extends HTMLElement {
 
     connectedCallback() {
       this.atropos = new Atropos({
-        el: this.querySelector('.atropos'),
-        onEnter() {
+        el: this.querySelector('.atropos')
+       /*, onEnter() {
           console.log('Atropos Component: Enter');
         },
         onLeave() {
           console.log('Atropos Component: Leave');
-        },
+        }, 
         onRotate(x, y) {
           console.log('Atropos Component: Rotate', x, y);
-        }
+        } */
       });
 
-      console.log('Atropos Component: Connected!', this);
+      //console.log('Atropos Component: Connected!', this);
     }
 
     disconnectedCallback() {
       this.atropos.destroy();
 
-      console.log('Atropos Component: Disconnected!', this);
+      //console.log('Atropos Component: Disconnected!', this);
     }
   }
 
