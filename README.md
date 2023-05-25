@@ -2,7 +2,7 @@
 
 # Event Website Under Development 
 # Demo
-[Click to Play](siddhantsingh1230.github.io/Events/)
+[Click to Play](https://siddhantsingh1230.github.io/Events/)
 
 
 
